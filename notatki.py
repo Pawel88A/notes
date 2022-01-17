@@ -197,6 +197,125 @@
 # # print(last_char)
 # res = first_char + middle_char + last_char
 # print("Mix String to ", res)
-
-
+#
+# a = "Python"
+# b = 317
+# print("a: {}, b: {}".format(a, b))
+# b, a = a, b
+# print("a: {}, b: {}".format(a, b))
+#
+# for x in range(1500,2701):
+#     if x%7==0 and x%5==0
+#         print(x)
+#
+#
+# PONIEDZIAŁEK
+# def simple_function():
+#     print('Hello world!')
+#     print('Wikipedia')
+#
+# simple_function()
+#
+# def my_function():
+#     return 3+3
+#
+# print(my_function())
+#
+# def my_function():
+#     """Dokumentacja funkcji"""
+# help(my_function)
+#
+# def fibbonaci_numbers(n):
+#     ''' zwraca liczby Fibonacciego mniejsze od n '''
+#     wynik = []
+#     a, b = 0, 1
+#     # while a < n:
+#     while len(wynik) < n:
+#         wynik.append(a)
+#         a, b = b, a+b
+#     return wynik
+# x = fibbonaci_numbers(12+2)
+# print(x)
+# print(fibbonaci_numbers.__doc__)
+#
+# # funkcja len zlicza
+# def fukcja(x):
+#     a = 0
+#     for y in x:
+#         a += 1
+#     return a
+#
+# c = fukcja("jakaś wartość")
+# print(c)
+#
+# def lista(l):
+#     a = 0
+#     for i in l:
+#         a+=i
+#     return a
+# b=lista(1;5;6;8)
+# print(b)
+# #szukać gdzie jest błąd
+#
+# # mnożenie listę
+# def lista(x):
+#     a = x[0]
+#     for i in x[1:]:
+#         a*=i
+#     return a
+# b = lista([2,4,5])
+# print(b)
+#
+#największa z listy
+# def największ_zlisty(x):
+#     a = x[0]
+#     for i in x:
+#         if i>a:
+#             a = i
+#     return a
+# b=[-42,4,-7,-8]
+# c= największ_zlisty(b)
+# print(c)
+#
+#zliczanie ilości znaków
+# def zliczanie(x):
+#     a = {}
+#     for i in x:
+#         b = a.keys()
+#         if i in b:
+#             a[i]+=1
+#         else:
+#             a[i] = 1
+#     return a
+#
+# z = zliczanie("policz ilość znaków")
+# print(z)
+#
+# Funkcja w Pythonie do zliczania ciągów znaków, w których długość ciągu wynosi 2 lub więcej, a pierwszy i ostatni znak są takie same z podanej listy ciągów
+# 8:39
+# Ćwiczenie
+# Napisz funkcję w Pythonie, który zlicza ciągi znaków, w których długość ciągu wynosi 2 lub więcej, a pierwszy i ostatni znak są takie same z podanej listy ciągów.
+# Przykładowa lista : ['abc', 'xyz', 'aba', '1221']
+# Oczekiwany wynik: 2
+#
+# def ciąg(x):
+#     licznik = 0
+#     for i in x:
+#         if len(i) >= 2 and i[-1] == i[0]:
+#             licznik += 1
+#     return licznik
+# print(ciąg(['abc', 'xyz', 'aba', '1221']))
+#
+# Funkcja Pythona do pobrania listy, posortowanej w porządku rosnącym według ostatniego elementu w każdej krotce z podanej listy niepustych krotek
+# Ćwiczenie
+# Napisz funkcję w Pythonie, aby uzyskać listę posortowaną w porządku rosnącym według ostatniego elementu w każdej krotce z podanej listy niepustych krotek.
+# Przykładowa lista: [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
+# Oczekiwany wynik : [(2, 1), (1, 2), (2, 3), (4, 4), (2, 5)]
+# def funkcja1(krotka):
+#     return krotka[1]
+#
+# def sortowanie(lista):
+#     posortowana = sorted(lista, key=funkcja1)
+#     return posortowana
+# print(sortowanie( [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]))
 
