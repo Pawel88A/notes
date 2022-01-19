@@ -318,4 +318,175 @@
 #     posortowana = sorted(lista, key=funkcja1)
 #     return posortowana
 # print(sortowanie( [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]))
+#
+# Ćwiczenie
+# Napisz funkcję w Pythonie, aby uzyskać łańcuch składający się z pierwszych 2 i ostatnich 2 znaków z danego łańcucha. Jeśli długość ciągu jest mniejsza niż 2, zwróć zamiast tego pusty ciąg.
+# Przykładowy ciąg : Python
+# Oczekiwany wynik: Pyon
+# Przykładowy ciąg : Py
+# Oczekiwany wynik: PyPy
+# Przykładowy ciąg : P
+# Oczekiwany wynik: pusty ciąg
+#
+# def ciąg_znakow(x):
+#     i = ()
+#     if len(x) < 2:
+#         return ""
+#     else:
+#         return x[:2] + x[-2:]
+# print(ciąg_znakow("Python"))
+#
+# Ćwiczenie
+# Napisz program, policzy silnię dla liczby n tj.
+# n! = 1*2*3*4...*(n-2)*(n-1)*n
+# Zrób to przez napisanie funkcji, która rekurencyjne będzie się odwoływała do samej siebie do momentu gdy będzie liczyła silnie dla 1, która wynosi 1.
+#
+# def silnia(n):
+#     if n==1:
+#         return 1
+#     return silnia(n-1)*n
+# print(silnia(4))
+#
+# def ciagF(x):
+#     if x<=1:
+#         return x
+#     return ciagF(x-1)+ciagF(x-2)
+# print(ciagF(11))
+#
+# import sys
+# try:
+#     f = open("plik.txt")
+#     s = f.readline()
+#     i = int(s.strip())  # Usuń spacje
+#     print(i)
+# except OSError as err:
+#     print("Błąd systemu: {0}".format(err))
+# except ValueError:
+#     print("Nie można dokonać konwersji.")
+# except:     # PEP 8: E722 nie używaj pustego 'except'
+# print("Nieoczekiwany wyjątek:", sys.exc_info()[0])
+#
+# raise
+#
+# #Blok try zgłosi błąd podczas próby zapisu do pliku tylko do odczytu::
+#
+# try:
+#     file = open("demofile.txt")
+#     try:
+#         file.write("Lorum Ipsum")
+#     except:
+#         print("Coś poszło nie tak podczas ZAPISYWANIA do pliku")
+#     finally:
+#         file.close()
+# except:
+#     print("Coś poszło nie tak podczas OTWIERANIA pliku")
+#
+# x = -1
+#
+# if x < 0:
+#     raise Exception("Przepraszamy, brak liczb poniżej zera")
+#
+# Ćwiczenie
+# Podczas pisania funkcji najlepiej jest przeprowadzić walidację liczb.
+# Jeśli użytkownicy wprowadzą tekst, pojawi się błąd podczas próby konwersji na int.
+# Napisz program, który poprosi użytkownika o podanie dwóch liczb.
+# Dodaj i wydrukuj wynik.
+# Jeśli nie zostanie wprowadzona liczba, zwróć komunikat o błędzie i poproś ponownie.
+#
+# while True:
+#     try:
+#         x= int(input("Podaj pierwszą liczbę: "))
+#         y= int(input("Podaj drugą liczbę: "))
+#         print(int(x+y))
+#         break
+#     except ValueError:
+#         print("błąd")
+#
+# Podziel przez siebie dwie liczby
+# Umieść:
+# result = "Nie możesz podzielić przez 0"
+# we właściwym miejscu, aby program uniknął ZeroDivisionError
+# Podpowiedź 1: Po prostu umieść przypisanie wartości dla wyniku po linii Except
+# Podpowiedź 2: Zwróć uwagę na wcięcia
+#
+# a = 4
+# b = 0
+#
+# try:
+#     result= a / b
+# except ZeroDivisionError:
+#     result = "Nie możesz podzielić przez 0"
+# print(result)
+#
+# Ćwiczenie
+# Napisz dowolny kod.
+# Wychwyć w nim wyjątek, ale nic nie rób.
+#
+# a = 4
+# b = 0
+#
+# try:
+#     result= a / b
+# except ZeroDivisionError:
+#     pass  #chamskie omijanie wyjątków TAK NIE ROBIĆ
+#
+# Ćwiczenie
+# Spróbuj dodać int do ciągu.
+# Umieść:
+# msg = "Nie możesz dodać int do string"
+# aby program uniknął błędu BaseException.
+# Możesz użyć wyjątku Exception, chociaż zwykle powinno się ostrożnie używać tak potężnych instrukcji wyjątków.
+#
+# a = 5
+# b = 'abc'
+# try:
+#     msg = a + b
+# except ValueError:
+#     msg = "Nie możesz dodać int do string"
+# print(msg)
+#
+# Ćwiczenie
+# Stwórz trójelementową listę.
+# Spróbuj wydrukować piąty element.
+# Umieść:
+# msg = "Jesteś poza zakresem listy"
+# aby uniknąć wyjątku IndexError.
+#
+# x = ["A",3,55]
+# try:
+#     msg = x[5]
+# except IndexError as err:
+# # except IndexError
+#     msg = err
+#     # msg = "Jesteń poza zakresem listy"
+# print(msg)
+#
+# Ćwiczenie
+# Spróbuj otworzyć do czytania plik (podpowiedź: f = open(arg, "r")).
+# W razie braku możliwości otwarcia pliku, obsłuż wyjątek.
+# W przeciwnym przypadku wypisz:
+# Nazwę pliku;
+# Liczbę wierszy (podpowiedź: len(f.readlines()).
+# Na koniec zamknij ten plik (podpowiedź: f.close()).
+# arg = "testowy.txt"
+# try:
+#     f = open(arg,"r")
+# except IOError:
+#     print("Nie można otworzyć pliku")
+# else:
+#     print("Ilość wierszy: "+ str(f.readlines()))
+#     f.close()   #poprawić
+#
+# Ćwiczenie
+# Użyj finally do zamykania obiektów i czyszczenia zasobów.
+# Spróbuj otworzyć i zapisać (podpowiedź: write) w pliku, którego nie można zapisać.
+# Zapewnij, aby program mógł kontynuować bez pozostawiania otwartego obiektu pliku.
+
+try:
+    plik = open(testowy.txt,"r")
+    plik.write("string")
+except IOError:
+    print("coś poszło nie tak")
+finally:
+    plik.close()   #poprawić
 
