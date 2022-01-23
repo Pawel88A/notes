@@ -481,12 +481,129 @@
 # Użyj finally do zamykania obiektów i czyszczenia zasobów.
 # Spróbuj otworzyć i zapisać (podpowiedź: write) w pliku, którego nie można zapisać.
 # Zapewnij, aby program mógł kontynuować bez pozostawiania otwartego obiektu pliku.
+#
+# try:
+#     plik = open(testowy.txt, "r")
+#     plik.write("string")
+# except IOError:
+#     print("coś poszło nie tak")
+# finally:
+#     plik.close()   #poprawić
+#
+# x = float(input('podaj x: '))
+# # if x>3 and x<10:
+# #     print(True)
+# # else:
+# #     print(False)
+# #można to zrobić prościej
+# print(x>3 and x<10)
+#
+# x = float(input('podaj wartość x: '))
+# print(x>4 or x<3)
+#
+# x = float(input('podaj wartość x: '))
+# print(not(x>3 and x<10))
+#
+# nice = True
+# personality = ("wredny", "miły")[nice]
+# print("Kot jest", personality) #wyjście: Kot jest miły
 
-try:
-    plik = open(testowy.txt,"r")
-    plik.write("string")
-except IOError:
-    print("coś poszło nie tak")
-finally:
-    plik.close()   #poprawić
-
+# string = 'Python'
+# for litera in string:
+#    print('litera:', litera)
+# # litera = string[0]
+# # print('litera:', litera)
+# # litera = string[1]
+# # print('litera:', litera)
+# # litera = string[2]
+# # print('litera:', litera)
+# # litera = string[3]
+# # print('litera:', litera)
+# # litera = string[4]
+# # print('litera:', litera)
+# # litera = string[5]
+# # print('litera:', litera)
+#
+# warzywa = ['marchew', 'kalafior', 'kapusta']
+# for warzywo in warzywa:
+#     print('warzywo:', warzywo)
+#
+# warzywa = ['marchew', 'kalafior', 'kapusta']
+# i = 1
+# for warzywo in warzywa:
+#     print('warzywo:', i, warzywo)
+#     i += 1
+#
+# lista = ["Rafal", "Agata", "Michal", "Pawel", "Grzegorz", "Robert", "Aneta", "Tomasz", "Monika", "Klaudia", "Wiktor", "Kinga", "Marcin", "Tomasz", "Przemyslaw"]
+#
+# lista.sort()
+# i=0
+# for t in lista:
+#     if t[-1]=="a":
+#         i=i+1
+# print(i)
+# print(len(lista))
+#
+# print("Przykład range() w Pythonie")
+# print("Uzyskaj liczby z zakresu od 0 do 5")
+# for i in range(6):
+#     print(i, end=', ')
+#
+# for i in range(2,11,2):
+#print(i)
+#
+# for i in range(5):
+#     print(i)
+# else:
+#     print("Gotowe!")
+# liczby = list()
+# i = 2
+# while i < 11:
+#     liczby.append(i)
+#     i += 2
+# print(liczby) # [2, 4, 6, 8, 10]
+#
+# lines = list()
+# print('Wprowadź tekst po linijce.')
+# print('Żeby zakończyć wprowadź pustą linię.')
+# line = input('Następna linijka: ')
+# while line != '':
+#     lines.append(line)
+#     line = input('Następna linijka: ')  # reset
+# print(lines)
+#
+# for num in range(1, 20):
+#     if not num % 2:  # num % 2 == 0
+#         print('Kolejna liczba parzysta:', num)
+#         continue
+#     print('Kolejna liczba:', num)
+#
+# for n in range(2, 100):
+#     for x in range(2, n):
+#         if n % x == 0:
+#             break
+#     else: # normalny koniec pętli
+#         print(n, 'jest liczbą pierwszą')
+#
+# x = int(input("Podaj pierwsza liczbe: "))
+# y = int(input("Podaj druga liczbe: "))
+# if x > y:
+#     print("x jest wieksze od y")
+#     n = y
+# else:
+#     print("x jest mniejsze od y")
+#     n = x
+# print(n)
+#
+# for m in range(n, 0,-1):
+#     if x % m == 0 and y % m == 0:
+#         print(x, "i", y, "dzieli sie przez", m)
+#         break
+#
+# name = input("Proszę wpisać swoje imię.")
+# # Wpisz swoją odpowiedź tutaj.
+#
+# if len(name) > 0:
+#     print(name)
+# else:
+#     pass            #dzięki pass nie zwraca błędu
