@@ -223,7 +223,14 @@
 # from math import sin, pi
 # print(sin(pi/2))
 
+def praca_domowa('sonety.txt'):
+    with open('sonety.txt', 'r') as infile:
+        words = infile.read().split()
+    max_len = len(max(words, key=len))
+    return [word for word in words if len(word) == max_len]
 
+
+print(praca_domowa('sonety.txt'))
 
 
 
